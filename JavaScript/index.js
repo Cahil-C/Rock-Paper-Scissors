@@ -34,8 +34,8 @@ function playGame ()
     let humanScore = 0;
 
     // Get value of computer and human and pass it in as arguments for playRound()
-    let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
+    let computerChoice = undefined;
+    let humanChoice = undefined;
 
     // Single Round
     function playRound (humanChoice, computerChoice)
@@ -95,7 +95,7 @@ function playGame ()
     for (i = 1; i <= 5; i++)
     {
         computerChoice = getComputerChoice();
-        humanChoice = getHumanChoice()
+        humanChoice = getHumanChoice();
         playRound(computerChoice, humanChoice);
     }
 }
