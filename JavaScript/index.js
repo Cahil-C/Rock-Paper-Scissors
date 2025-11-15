@@ -13,3 +13,11 @@ function getComputerChoice ()
             return "scissor";
     }
 }
+
+// get the human choice (Assuming the user enter a valid choice)
+function getHumanChoice ()
+{
+    const humanChoice = prompt("Pick between rock, paper or scissor")
+
+    return humanChoice
+}
