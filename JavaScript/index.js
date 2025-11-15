@@ -23,6 +23,8 @@ function getHumanChoice ()
     return humanChoice
 }
 
+
+
 function playGame ()
 {
     console.log("Let's play rock, paper, scissor")
@@ -30,6 +32,10 @@ function playGame ()
     // Keep track of players score (computer and the human)
     let computerScore = 0;
     let humanScore = 0;
+
+    // Get value of computer and human and pass it in as arguments for playRound()
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
 
     // Single Round
     function playRound (humanChoice, computerChoice)
@@ -85,8 +91,13 @@ function playGame ()
         }
     } 
 
-    playRound("rock", "paper");
+    // Play five round of game
+    for (i = 1; i <= 5; i++)
+    {
+        computerChoice = getComputerChoice();
+        humanChoice = getHumanChoice()
+        playRound(computerChoice, humanChoice);
+    }
 }
 
-// 
 playGame()
