@@ -42,8 +42,7 @@ function playGame ()
         if (computerChoice === "rock" && humanChoice === "rock")
         {
             console.log(`It's a tie! ${computerChoice} and ${humanChoice}`);
-            // computerScore += 1;
-            // humanScore += 1; 
+            
         }
         else if (computerChoice === "rock" && humanChoice === "paper")
         {
@@ -63,8 +62,6 @@ function playGame ()
         else if (computerChoice === "paper" && humanChoice === "paper")
         {
             console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
-            // computerScore += 1;
-            // humanScore += 1;
         }
         else if (computerChoice === "paper" && humanChoice === "scissors")
         {
@@ -78,14 +75,12 @@ function playGame ()
         }
         else if (computerChoice === "scissors" && humanChoice === "paper")
         {
-            console.log(`You lose! ${computerChoice} and ${humanChoice}`);
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
             computerScore += 1;
         }
         else if (computerChoice === "scissors" && humanChoice === "scissors")
         {
             console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
-            // computerScore += 1;
-            // humanChoice += 1;
         }
     } 
 
