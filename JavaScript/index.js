@@ -23,11 +23,9 @@ function getHumanChoice ()
     return humanChoice
 }
 
-
-
 function playGame ()
 {
-    console.log("Let's play rock, paper, scissor")
+    console.log("Welcome, let's play rock, paper, scissor")
 
     // Keep track of players score (computer and the human)
     let computerScore = 0;
@@ -116,6 +114,8 @@ function playGame ()
     {
         console.log("It's a tie")
     }
+
+    console.log("Game Over!")
 }
 
 playGame();
