@@ -25,3 +25,9 @@ function getHumanChoice ()
 // Keep track of players score (computer and the human)
 let computerScore = 0;
 let humanScore = 0;
+
+// Single Round
+function playRound (humanChoice, computerChoice)
+{
+    
+}
