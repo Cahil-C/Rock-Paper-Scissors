@@ -17,7 +17,8 @@ function getComputerChoice ()
 // get the human choice (Assuming the user enter a valid choice)
 function getHumanChoice ()
 {
-    const humanChoice = prompt("Pick between rock, paper or scissor")
+    let humanChoice = prompt("Pick between rock, paper or scissor")
+    humanChoice = humanChoice.toLowerCase();
 
     return humanChoice
 }
@@ -29,5 +30,5 @@ let humanScore = 0;
 // Single Round
 function playRound (humanChoice, computerChoice)
 {
-    
+
 }
