@@ -1,3 +1,7 @@
+let rockBtn = document.querySelector(".rock");
+let paperBtn = document.querySelector(".paper");
+let scissorsBtn = document.querySelector(".scissors");
+
 // Get the computer choice
 function getComputerChoice ()
 {
@@ -17,8 +21,8 @@ function getComputerChoice ()
 // get the human choice (Assuming the user enter a valid choice)
 function getHumanChoice ()
 {
-    let humanChoice = prompt("Pick between rock, paper or scissors")
-    humanChoice = humanChoice.toLowerCase();
+    // let humanChoice = prompt("Pick between rock, paper or scissors")
+    // humanChoice = humanChoice.toLowerCase();
 
     return humanChoice
 }
@@ -38,7 +42,6 @@ function playGame ()
     // Single Round
     function playRound (computerChoice, humanChoice)
     {
-
         if (computerChoice === "rock" && humanChoice === "rock")
         {
             console.log(`It's a tie! ${computerChoice} and ${humanChoice}`);
@@ -92,25 +95,39 @@ function playGame ()
     //     playRound(computerChoice, humanChoice);
     // }
 
+    computerChoice = getComputerChoice();
+    rockBtn.addEventListener('click', () => 
+    {
+        playRound(computerChoice, "rock");
+    });
+    paperBtn.addEventListener('click', () => 
+    {
+        playRound(computerChoice, "paper");
+    });
+    scissorsBtn.addEventListener('click', () => 
+    {
+        playRound(computerChoice, "scissors");
+    });
+
     // Display total score
     console.log(`Computer Score: ${computerScore}`);
     console.log(`Your Score: ${humanScore}`);
 
     // Declare Winner
-    if (computerScore > humanScore)
-    {
-        console.log("The computer wins!")
-    }
-    else if (computerScore < humanScore)
-    {
-        console.log("You win!");
-    }
-    else 
-    {
-        console.log("It's a tie!")
-    }
+    // if (computerScore > humanScore)
+    // {
+    //     console.log("The computer wins!")
+    // }
+    // else if (computerScore < humanScore)
+    // {
+    //     console.log("You win!");
+    // }
+    // else 
+    // {
+    //     console.log("It's a tie!")
+    // }
 
-    console.log("Game Over!")
+    // console.log("Game Over!")
 }
 
 playGame();
