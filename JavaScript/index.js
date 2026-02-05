@@ -85,12 +85,12 @@ function playGame ()
     } 
 
     // Play five round of game
-    for (let i = 1; i <= 5; i++)
-    {
-        computerChoice = getComputerChoice();
-        humanChoice = getHumanChoice();
-        playRound(computerChoice, humanChoice);
-    }
+    // for (let i = 1; i <= 5; i++)
+    // {
+    //     computerChoice = getComputerChoice();
+    //     humanChoice = getHumanChoice();
+    //     playRound(computerChoice, humanChoice);
+    // }
 
     // Display total score
     console.log(`Computer Score: ${computerScore}`);
