@@ -1,6 +1,8 @@
 let rockBtn = document.querySelector(".rock");
 let paperBtn = document.querySelector(".paper");
 let scissorsBtn = document.querySelector(".scissors");
+let resultsContainer = document.querySelector(".results-container");
+let content = document.createElement("div");
 
 // Get the computer choice
 function getComputerChoice ()
@@ -44,66 +46,68 @@ function playGame ()
     {
         if (computerChoice === "rock" && humanChoice === "rock")
         {
-            console.log(`It's a tie! ${computerChoice} and ${humanChoice}`);
-            
+            content.textContent = `It's a tie! ${computerChoice} and ${humanChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "rock" && humanChoice === "paper")
         {
-            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
             humanScore += 1; 
+            content.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "rock" && humanChoice === "scissors")
         {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
             computerScore += 1;
+            content.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "paper" && humanChoice === "rock")
         {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
             computerScore += 1;
+            content.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "paper" && humanChoice === "paper")
         {
-            console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
+            content.textContent = `It's a tie! ${humanChoice} and ${computerChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "paper" && humanChoice === "scissors")
         {
-            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
             humanScore += 1;
+            content.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "scissors" && humanChoice === "rock")
         {
-            console.log(`You win ${humanChoice} beats ${computerChoice}`);
             humanScore += 1;
+            content.textContent = `You win ${humanChoice} beats ${computerChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "scissors" && humanChoice === "paper")
         {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
             computerScore += 1;
+            content.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
+            resultsContainer.appendChild(content)
         }
         else if (computerChoice === "scissors" && humanChoice === "scissors")
         {
-            console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
+            content.textContent = `It's a tie! ${humanChoice} and ${computerChoice}`;
+            resultsContainer.appendChild(content)
         }
     } 
-
-    // Play five round of game
-    // for (let i = 1; i <= 5; i++)
-    // {
-    //     computerChoice = getComputerChoice();
-    //     humanChoice = getHumanChoice();
-    //     playRound(computerChoice, humanChoice);
-    // }
 
     computerChoice = getComputerChoice();
     rockBtn.addEventListener('click', () => 
     {
         playRound(computerChoice, "rock");
     });
+
     paperBtn.addEventListener('click', () => 
     {
         playRound(computerChoice, "paper");
     });
+    
     scissorsBtn.addEventListener('click', () => 
     {
         playRound(computerChoice, "scissors");
